@@ -211,15 +211,15 @@ This is one of the foundational troubleshooting processes I can use as I continu
 
 ## IP Configuration
 
-![IP Configuration](ipconfig-results.png)
+![IP Configuration](https://github.com/sclabon540/IT-Portfolio/blob/main/projects/windows-network-troubleshooting/ipconfig-results.png)
 
 ## External IP Connectivity
 
-![Ping 8.8.8.8](ping-ip-results.png)
+![Ping 8.8.8.8](https://github.com/sclabon540/IT-Portfolio/blob/main/projects/windows-network-troubleshooting/ping-ip-results.png)
 
 ## DNS Name Resolution
 
-![Ping Google](ping-dns-results.png)
+![Ping Google](https://github.com/sclabon540/IT-Portfolio/blob/main/projects/windows-network-troubleshooting/ping-dns-results.png)
 
 ---
 
