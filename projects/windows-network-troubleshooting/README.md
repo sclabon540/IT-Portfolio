@@ -63,9 +63,6 @@ I looked for:
 
 Network configuration information was present, including IPv4, IPv6, subnet mask, and default gateway information.
 
-### Screenshot
-
-![IP Configuration](ipconfig-results.png)
 
 ---
 
@@ -89,9 +86,7 @@ The test returned successful replies from the destination.
 
 This confirmed that the computer was able to communicate with the external IP address.
 
-### Screenshot
 
-![Ping 8.8.8.8](ping-ip-results.png)
 
 ---
 
@@ -117,9 +112,7 @@ The test returned successful replies.
 
 This confirmed that the computer was able to resolve the domain name and communicate with the destination.
 
-### Screenshot
 
-![Ping Google](ping-dns-results.png)
 
 ---
 
@@ -207,19 +200,9 @@ This is one of the foundational troubleshooting processes I can use as I continu
 
 ---
 
-# Screenshots
 
-## IP Configuration
 
-![IP Configuration](https://github.com/sclabon540/IT-Portfolio/blob/main/projects/windows-network-troubleshooting/ipconfig-results.png)
 
-## External IP Connectivity
-
-![Ping 8.8.8.8](https://github.com/sclabon540/IT-Portfolio/blob/main/projects/windows-network-troubleshooting/ping-ip-results.png)
-
-## DNS Name Resolution
-
-![Ping Google](https://github.com/sclabon540/IT-Portfolio/blob/main/projects/windows-network-troubleshooting/ping-dns-results.png)
 
 ---
 
