@@ -200,6 +200,22 @@ This is one of the foundational troubleshooting processes I can use as I continu
 
 ---
 
+### Evidence: Network Troubleshooting Lab
+
+### 1. IP Configuration
+This screenshot shows IPv4, IPv6, subnet mask, and default gateway information.
+
+![IP Configuration Results](ipconfig-results.png)
+
+### 2. Connectivity Test
+This screenshot shows a ping test to Google's public IP address.
+
+![Ping IP Results](ping-ip-results.png)
+
+### 3. DNS Resolution Test
+This screenshot shows a ping test using a domain name to test DNS resolution.
+
+![Ping DNS Results](ping-dns-results.png)
 
 
 
