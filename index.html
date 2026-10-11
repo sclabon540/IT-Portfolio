@@ -2,135 +2,364 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IT Support Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Sierra Clabon | IT Support Portfolio</title>
+  <meta name="description" content="IT support portfolio showcasing Windows troubleshooting, networking, Linux fundamentals, and technical documentation.">
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
       color: #243247;
       background: #f4f7fb;
     }
+
     header {
       background: #17365d;
       color: white;
-      padding: 45px 20px;
+      padding: 65px 20px;
       text-align: center;
     }
-    header h1 { margin-bottom: 8px; }
+
+    header h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3rem);
+    }
+
+    header p {
+      max-width: 650px;
+      margin: 12px auto;
+    }
+
+    .subtitle {
+      color: #dbeafe;
+    }
+
     nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
       background: #102744;
-      padding: 14px;
+      padding: 14px 10px;
       text-align: center;
     }
+
     nav a {
+      display: inline-block;
       color: white;
-      margin: 0 12px;
       text-decoration: none;
+      margin: 4px 12px;
+      font-weight: bold;
     }
+
+    nav a:hover,
+    nav a:focus {
+      text-decoration: underline;
+    }
+
     main {
-      max-width: 900px;
-      margin: 25px auto;
+      max-width: 1000px;
+      margin: 30px auto;
       padding: 0 18px;
     }
+
     section {
       background: white;
-      margin-bottom: 20px;
-      padding: 24px;
-      border-radius: 10px;
+      margin-bottom: 24px;
+      padding: 28px;
+      border-radius: 12px;
+      box-shadow: 0 3px 12px rgba(20, 40, 70, 0.06);
     }
-    .project {
-      border-left: 4px solid #2874a6;
-      padding: 10px 15px;
-      margin: 15px 0;
+
+    h2 {
+      color: #17365d;
+      margin-top: 0;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 16px;
+    }
+
+    .skill-card {
+      padding: 18px;
       background: #f4f7fb;
+      border-radius: 8px;
+      border-top: 4px solid #2874a6;
     }
-    a { color: #175c91; }
-    nav a { color: white; }
-    footer {
-      text-align: center;
+
+    .skill-card h3 {
+      margin-top: 0;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
       padding: 20px;
+      border: 1px solid #dbe3ed;
+      border-radius: 10px;
+      background: #ffffff;
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+      color: #17365d;
+    }
+
+    .project-card p {
+      flex-grow: 1;
+    }
+
+    .project-card a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #175c91;
+      font-weight: bold;
+    }
+
+    a:focus {
+      outline: 3px solid #e5a000;
+      outline-offset: 3px;
+    }
+
+    .note {
+      color: #526174;
+      font-size: 0.95rem;
+    }
+
+    footer {
       background: #17365d;
       color: white;
+      text-align: center;
+      padding: 24px 16px;
+    }
+
+    footer a {
+      color: #ffffff;
+    }
+
+    @media (max-width: 480px) {
+      header {
+        padding: 42px 16px;
+      }
+
+      nav a {
+        margin: 5px 8px;
+      }
+
+      section {
+        padding: 20px;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<header>
-  <h1>IT Support Portfolio</h1>
-  <p>Entry-Level IT Support | Networking | Technical Troubleshooting</p>
-</header>
-
-<nav>
-  <a href="#about">About</a>
-  <a href="#skills">Skills</a>
-  <a href="#projects">Projects</a>
-  <a href="#education">Education</a>
-</nav>
-
-<main>
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I am an Information Technology student building practical skills
-      in IT support, computer troubleshooting, networking, and Linux.
-      This portfolio documents my technical projects and learning.
+  <header>
+    <h1>Sierra Clabon</h1>
+    <p class="subtitle">
+      IT Support Specialist | Entry-Level Cybersecurity
     </p>
-  </section>
+    <p>
+      Building practical skills in computer troubleshooting,
+      networking, operating systems, and technical support.
+    </p>
+  </header>
 
-  <section id="skills">
-    <h2>Technical Skills</h2>
-    <ul>
-      <li>Windows troubleshooting and Command Prompt</li>
-      <li>IPv4, IPv6, subnet masks, and default gateways</li>
-      <li>Network connectivity and basic DNS troubleshooting</li>
-      <li>Linux command-line fundamentals</li>
-      <li>Help desk documentation and ticket handling</li>
-    </ul>
-  </section>
+  <nav aria-label="Main navigation">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-  <section id="projects">
-    <h2>IT Projects</h2>
+  <main>
 
-    <div class="project">
-      <h3>Windows Troubleshooting</h3>
-      <p>Documented Windows troubleshooting practice.</p>
-      <a href="projects/">Browse projects</a>
-    </div>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I am an Information Technology student at Southern New
+        Hampshire University, working toward an associate degree
+        with an expected graduation date of 2027.
+      </p>
+      <p>
+        My portfolio documents my hands-on practice, technical
+        learning, and troubleshooting process. I am interested in
+        entry-level IT support, help desk, service desk, and desktop
+        support opportunities.
+      </p>
+    </section>
 
-    <div class="project">
-      <h3>Linux Fundamentals</h3>
-      <p>Practice with basic Linux commands and navigation.</p>
-      <a href="projects/">Browse projects</a>
-    </div>
+    <section id="skills">
+      <h2>Technical Skills</h2>
 
-    <div class="project">
-      <h3>Help Desk Ticket</h3>
-      <p>Demonstrates ticket documentation and troubleshooting.</p>
-      <a href="projects/">Browse projects</a>
-    </div>
+      <div class="skills">
 
-    <div class="project">
-      <h3>Network Troubleshooting</h3>
-      <p>Network configuration and connectivity tests with screenshots.</p>
-      <a href="projects/windows-network-troubleshooting/README.md">
-        View project and evidence
-      </a>
-    </div>
-  </section>
+        <div class="skill-card">
+          <h3>Operating Systems</h3>
+          <ul>
+            <li>Windows</li>
+            <li>Linux fundamentals</li>
+            <li>Command-line navigation</li>
+          </ul>
+        </div>
 
-  <section id="education">
-    <h2>Education</h2>
-    <p>Associate degree in Information Technology — Southern New Hampshire University (in progress; expected 2027).</p>
-    <p>Relevant learning: IT support, networking, cybersecurity, and Python.</p>
-  </section>
-</main>
+        <div class="skill-card">
+          <h3>IT Support</h3>
+          <ul>
+            <li>Hardware and software troubleshooting</li>
+            <li>Printer and Wi-Fi support</li>
+            <li>Technical documentation</li>
+          </ul>
+        </div>
 
-<footer>
-  <p>IT Support Portfolio | Technical Learning and Projects</p>
-</footer>
+        <div class="skill-card">
+          <h3>Networking</h3>
+          <ul>
+            <li>IPv4 and IPv6 concepts</li>
+            <li>Subnet masks and gateways</li>
+            <li>Ping and basic DNS troubleshooting</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>Additional Learning</h3>
+          <ul>
+            <li>Cybersecurity fundamentals</li>
+            <li>Microsoft Azure fundamentals</li>
+            <li>Python and SQL</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>IT Projects</h2>
+      <p>
+        Explore my projects to see the steps, commands, screenshots,
+        and documentation behind my technical practice.
+      </p>
+
+      <div class="projects">
+
+        <article class="project-card">
+          <h3>Windows Troubleshooting Lab</h3>
+          <p>
+            Practice documenting Windows troubleshooting steps,
+            checking connectivity, and investigating possible causes.
+          </p>
+          <p class="note">
+            Skills: Windows, troubleshooting, documentation.
+          </p>
+          <a href="README.md#windows-troubleshooting-lab">
+            View project documentation
+          </a>
+        </article>
+
+        <article class="project-card">
+          <h3>Linux Fundamentals Lab</h3>
+          <p>
+            Practice essential Linux commands for navigating
+            directories and viewing files.
+          </p>
+          <p class="note">
+            Skills: Linux command line and file navigation.
+          </p>
+          <a href="README.md#linux-fundamentals-lab">
+            View project documentation
+          </a>
+        </article>
+
+        <article class="project-card">
+          <h3>Help Desk Ticket</h3>
+          <p>
+            A project area for documenting a technical issue,
+            troubleshooting steps, findings, and resolution.
+          </p>
+          <p class="note">
+            Skills: ticket documentation and user support.
+          </p>
+          <a href="https://github.com/sclabon540/IT-Portfolio">
+            View portfolio repository
+          </a>
+        </article>
+
+        <article class="project-card">
+          <h3>Network Troubleshooting</h3>
+          <p>
+            Review Windows IP configuration and test network
+            connectivity using Command Prompt.
+          </p>
+          <p class="note">
+            Skills: IP addressing, ping tests, and basic DNS checks.
+          </p>
+          <a href="https://github.com/sclabon540/IT-Portfolio/blob/main/projects/windows-network-troubleshooting/README.md">
+            View project and screenshots
+          </a>
+        </article>
+
+      </div>
+
+      <p class="note">
+        Project links should point to the actual documentation
+        for each project. The Help Desk Ticket card currently
+        opens the main repository until a dedicated project page
+        is linked.
+      </p>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <h3>Southern New Hampshire University</h3>
+      <p>
+        Associate degree in Information Technology —
+        in progress, expected 2027.
+      </p>
+      <p>
+        Additional learning includes networking, cybersecurity,
+        Windows administration, Python, and data analytics.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact and Portfolio</h2>
+      <p>
+        Explore my GitHub repository to review my projects
+        and technical documentation.
+      </p>
+      <p>
+        <a href="https://github.com/sclabon540/IT-Portfolio">
+          Visit my GitHub portfolio repository
+        </a>
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Sierra Clabon | IT Support Portfolio</p>
+    <p>Hands-on learning, troubleshooting, and technical growth.</p>
+  </footer>
 
 </body>
 </html>
