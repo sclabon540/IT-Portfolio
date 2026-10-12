@@ -82,3 +82,26 @@ These exercises helped me understand how Linux commands support file management,
 - Operating system: Ubuntu Linux
 - Environment: Windows Subsystem for Linux (WSL)
 - Skill level: Beginner
+
+
+## Screenshots
+
+The following screenshots document my hands-on Linux Fundamentals exercises using Ubuntu on WSL.
+
+### Exercise 1
+![Linux Fundamentals Exercise 1](Linux%20Fundamentals%201.png)
+
+### Exercise 2
+![Linux Fundamentals Exercise 2](Linux%20Fundamentals%202.png)
+
+### Exercise 3
+![Linux Fundamentals Exercise 3](Linux%20Fundamentals%203.png)
+
+### Exercise 4
+![Linux Fundamentals Exercise 4](Linux%20Fundamentals%204.png)
+
+### Exercise 4.2
+![Linux Fundamentals Exercise 4.2](Linux%20Fundamentals%204.2.png)
+
+### Exercise 5
+![Linux Fundamentals Exercise 5](Linux%20Fundamentals%205.png)
