@@ -82,7 +82,7 @@ A hands-on troubleshooting exercise focused on diagnosing common Windows and net
 
 ---
 
-## Linux Fundamentals Lab
+## [Linux Fundamentals Lab](projects/linux-fundamentals/README.md)
 
 **Skills:** Linux | Command Line | System Administration
 
