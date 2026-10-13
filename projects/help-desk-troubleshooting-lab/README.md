@@ -48,7 +48,7 @@ A technician should gather evidence before changing application settings. A repo
 ![Outlook in Task Manager](screenshots/outlook-task-manager.png)
 
 ### 3. Outlook Advanced Options
-![Outlook Advanced Options](screenshots/Outlook-Advanced-Options.png)
+![Outlook Advanced Options](screenshots/outlook-advanced-options.png)
 
 ### 4. Outlook Opens Successfully
 ![Outlook mail interface](screenshots/outlook-open-successfully.png)
