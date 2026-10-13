@@ -39,4 +39,17 @@ A technician should gather evidence before changing application settings. A repo
 
 ## Screenshot Evidence
 
-Screenshots will be added after personal information is removed or hidden.
+## Screenshot Evidence
+
+### 1. Outlook Search
+![Outlook search results](screenshots/outlook-search.png)
+
+### 2. Task Manager
+![Outlook in Task Manager](screenshots/outlook-task-manager.png)
+
+### 3. Outlook Advanced Options
+![Outlook Advanced Options](screenshots/outlook-advanced-options.png)
+
+### 4. Outlook Opens Successfully
+![Outlook mail interface](screenshots/outlook-open-successfully.png)
+
