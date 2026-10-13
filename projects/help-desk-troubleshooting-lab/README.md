@@ -42,7 +42,7 @@ A technician should gather evidence before changing application settings. A repo
 ## Screenshot Evidence
 
 ### 1. Outlook Search
-![Outlook search results](screenshots/outlook-search.png)
+![Outlook search results](screenshots/Outlook-Search.png)
 
 ### 2. Task Manager
 ![Outlook in Task Manager](screenshots/outlook-task-manager.png)
