@@ -89,6 +89,21 @@ A hands-on troubleshooting exercise focused on diagnosing common Windows and net
 A hands-on Linux project focused on learning essential command-line navigation and file management.
 
 ### Commands practiced
+### Linux Terminal Practice
+
+I practiced using the Linux command line in my Linux environment. My terminal prompt identifies my username and hostname:
+
+```bash
+sclab@Suika:~$
+```
+
+**Command example:**
+
+```bash
+whoami
+```
+
+This command displays the current username logged into the Linux system.
 
 ```text
 pwd
