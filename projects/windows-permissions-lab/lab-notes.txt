@@ -1,0 +1,41 @@
+Windows User Account and Permission Lab
+
+Project objective
+
+Practice inspecting Windows folder permissions and determining a user's effective access.
+
+
+Environment
+
+Operating System: Windows 11
+Computer name: suika
+User Account: sclab
+Test Folder: IT Permissions Lab
+
+
+Steps Performed
+
+Created a test folder on the desktop.
+Open folder's properties.
+Inspected the security tab.
+Opened Advanced Security Settings.
+Used the Effective Access tool to inspect my Windows account permissions
+Captured a screenshot of the results.
+
+Findings
+
+Effective access was granted for 12 listed permissions.
+Effective access was not granted for 2 listed permissions.
+Full Control
+Delete subfolder and files
+
+What I learned
+
+Windows folder permissions determine which actions a user can perform. Effective access help administrators review the combined permissions that apply to a specific account.
+
+A permission being denied does not automatically mean there is a problem. The underlying security rules must be reviewed before deciding whether corrective action is needed.
+
+
+Project Status
+
+Initial permissions investigation completed. Results documented for further review.
