@@ -1,357 +1,474 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Sierra Clabon | IT Support Portfolio</title>
-  <meta name="description" content="IT support portfolio showcasing Windows troubleshooting, networking, Linux fundamentals, and technical documentation.">
-
+  <meta name="description" content="Sierra Clabon's IT Support Specialist portfolio showcasing technical skills and troubleshooting projects.">
+  <title>Sierra Clabon | IT Support Specialist</title>
   <style>
-    * {
-      box-sizing: border-box;
+    :root {
+      --bg: #07111f;
+      --panel: #0e1d30;
+      --blue: #55c7ff;
+      --text: #eef6ff;
+      --muted: #afc0d4;
+      --border: #223951;
+      --green: #71e0ad;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
+      background: var(--bg);
+      color: var(--text);
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.7;
-      color: #243247;
-      background: #f4f7fb;
+    }
+
+    a { color: var(--blue); }
+
+    .container {
+      width: min(1050px, 90%);
+      margin: auto;
     }
 
     header {
-      background: #17365d;
-      color: white;
-      padding: 65px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: clamp(2rem, 5vw, 3rem);
-    }
-
-    header p {
-      max-width: 650px;
-      margin: 12px auto;
-    }
-
-    .subtitle {
-      color: #dbeafe;
-    }
-
-    nav {
+      background: #091625;
+      border-bottom: 1px solid var(--border);
       position: sticky;
       top: 0;
       z-index: 10;
-      background: #102744;
-      padding: 14px 10px;
-      text-align: center;
     }
 
-    nav a {
-      display: inline-block;
-      color: white;
+    nav {
+      min-height: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 15px 0;
+    }
+
+    .logo {
+      color: var(--text);
+      font-weight: bold;
+      font-size: 1.2rem;
       text-decoration: none;
-      margin: 4px 12px;
+    }
+
+    .logo span { color: var(--blue); }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: .95rem;
+    }
+
+    .nav-links a:hover { color: var(--blue); }
+
+    .hero {
+      padding: 85px 0 75px;
+      display: grid;
+      grid-template-columns: 1.3fr .7fr;
+      gap: 35px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: var(--green);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: .8rem;
       font-weight: bold;
     }
 
-    nav a:hover,
-    nav a:focus {
-      text-decoration: underline;
+    h1 {
+      font-size: clamp(2.7rem, 6vw, 4.8rem);
+      line-height: 1.08;
+      letter-spacing: -2px;
+      margin: 15px 0;
     }
 
-    main {
-      max-width: 1000px;
-      margin: 30px auto;
-      padding: 0 18px;
+    h1 span { color: var(--blue); }
+
+    .intro {
+      color: var(--muted);
+      font-size: 1.1rem;
+      max-width: 620px;
     }
 
-    section {
-      background: white;
-      margin-bottom: 24px;
-      padding: 28px;
-      border-radius: 12px;
-      box-shadow: 0 3px 12px rgba(20, 40, 70, 0.06);
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 11px 17px;
+      border: 1px solid var(--blue);
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .button.primary {
+      background: var(--blue);
+      color: #061321;
+    }
+
+    .terminal {
+      background: #0e1d30;
+      border: 1px solid #28506b;
+      border-radius: 14px;
+      padding: 23px;
+      font-family: monospace;
+      overflow-wrap: anywhere;
+    }
+
+    .terminal-title {
+      color: var(--green);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+      margin-bottom: 15px;
+    }
+
+    .terminal p { margin: 8px 0; }
+
+    .command { color: var(--blue); }
+
+    section { padding: 45px 0; }
+
+    .section-label {
+      color: var(--blue);
+      font-family: monospace;
+      text-transform: uppercase;
+      letter-spacing: 2px;
     }
 
     h2 {
-      color: #17365d;
-      margin-top: 0;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      margin: 5px 0 10px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 700px;
+      margin-bottom: 28px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 23px;
+      transition: border-color .2s, transform .2s;
+    }
+
+    .card:hover {
+      border-color: var(--blue);
+      transform: translateY(-3px);
+    }
+
+    .card-icon {
+      font-size: 1.7rem;
+    }
+
+    h3 { margin: 8px 0; }
+
+    .card p { color: var(--muted); }
+
+    .tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin: 15px 0;
+    }
+
+    .tag {
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 3px 10px;
+      font-size: .8rem;
+      color: var(--muted);
     }
 
     .skills {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 16px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 13px;
     }
 
-    .skill-card {
-      padding: 18px;
-      background: #f4f7fb;
-      border-radius: 8px;
-      border-top: 4px solid #2874a6;
+    .skill {
+      padding: 16px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 9px;
     }
 
-    .skill-card h3 {
-      margin-top: 0;
+    .skill strong { display: block; }
+
+    .skill p {
+      color: var(--muted);
+      font-size: .9rem;
+      margin-bottom: 0;
     }
 
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 18px;
+    .about {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 25px;
     }
 
-    .project-card {
+    .about p { color: var(--muted); }
+
+    .contact {
+      border: 1px solid #28506b;
+      border-radius: 12px;
+      background: var(--panel);
+      padding: 28px;
       display: flex;
-      flex-direction: column;
-      padding: 20px;
-      border: 1px solid #dbe3ed;
-      border-radius: 10px;
-      background: #ffffff;
-    }
-
-    .project-card h3 {
-      margin-top: 0;
-      color: #17365d;
-    }
-
-    .project-card p {
-      flex-grow: 1;
-    }
-
-    .project-card a {
-      display: inline-block;
-      margin-top: 10px;
-      color: #175c91;
-      font-weight: bold;
-    }
-
-    a:focus {
-      outline: 3px solid #e5a000;
-      outline-offset: 3px;
-    }
-
-    .note {
-      color: #526174;
-      font-size: 0.95rem;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
     }
 
     footer {
-      background: #17365d;
-      color: white;
-      text-align: center;
-      padding: 24px 16px;
+      margin-top: 45px;
+      padding: 25px 0;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: .9rem;
     }
 
-    footer a {
-      color: #ffffff;
+    @media (max-width: 700px) {
+      .hero { grid-template-columns: 1fr; padding-top: 55px; }
+      .grid, .skills { grid-template-columns: 1fr; }
+      nav { align-items: flex-start; }
     }
 
-    @media (max-width: 480px) {
-      header {
-        padding: 42px 16px;
-      }
-
-      nav a {
-        margin: 5px 8px;
-      }
-
-      section {
-        padding: 20px;
-      }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .card { transition: none; }
     }
   </style>
 </head>
-
 <body>
 
-  <header>
-    <h1>Sierra Clabon</h1>
-    <p class="subtitle">
-      IT Support Specialist | Entry-Level Cybersecurity
-    </p>
-    <p>
-      Building practical skills in computer troubleshooting,
-      networking, operating systems, and technical support.
-    </p>
-  </header>
-
-  <nav aria-label="Main navigation">
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#education">Education</a>
-    <a href="#contact">Contact</a>
+<header>
+  <nav class="container">
+    <a class="logo" href="#home">SC<span>.</span> IT SUPPORT</a>
+    <div class="nav-links">
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
   </nav>
+</header>
 
-  <main>
-
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        I am an Information Technology student at Southern New
-        Hampshire University, working toward an associate degree
-        with an expected graduation date of 2027.
+<main>
+  <div class="container hero" id="home">
+    <div>
+      <div class="eyebrow">● IT Support Portfolio</div>
+      <h1>Technology.<br><span>Troubleshooting.</span><br>Solutions.</h1>
+      <p class="intro">
+        Hi, I'm Sierra Clabon, an Information Technology student
+        building hands-on skills in technical support, Windows
+        troubleshooting, networking, and helping users solve problems.
       </p>
-      <p>
-        My portfolio documents my hands-on practice, technical
-        learning, and troubleshooting process. I am interested in
-        entry-level IT support, help desk, service desk, and desktop
-        support opportunities.
-      </p>
-    </section>
-
-    <section id="skills">
-      <h2>Technical Skills</h2>
-
-      <div class="skills">
-
-        <div class="skill-card">
-          <h3>Operating Systems</h3>
-          <ul>
-            <li>Windows</li>
-            <li>Linux fundamentals</li>
-            <li>Command-line navigation</li>
-          </ul>
-        </div>
-
-        <div class="skill-card">
-          <h3>IT Support</h3>
-          <ul>
-            <li>Hardware and software troubleshooting</li>
-            <li>Printer and Wi-Fi support</li>
-            <li>Technical documentation</li>
-          </ul>
-        </div>
-
-        <div class="skill-card">
-          <h3>Networking</h3>
-          <ul>
-            <li>IPv4 and IPv6 concepts</li>
-            <li>Subnet masks and gateways</li>
-            <li>Ping and basic DNS troubleshooting</li>
-          </ul>
-        </div>
-
-        <div class="skill-card">
-          <h3>Additional Learning</h3>
-          <ul>
-            <li>Cybersecurity fundamentals</li>
-            <li>Microsoft Azure fundamentals</li>
-            <li>Python and SQL</li>
-          </ul>
-        </div>
-
+      <div class="buttons">
+        <a class="button primary" href="#projects">Explore My Projects</a>
+        <a class="button"
+           href="https://github.com/sclabon540/IT-Portfolio"
+           target="_blank" rel="noopener noreferrer">View My GitHub ↗</a>
       </div>
-    </section>
+    </div>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <p>
-        Explore my projects to see the steps, commands, screenshots,
-        and documentation behind my technical practice.
-      </p>
+    <div class="terminal">
+      <div class="terminal-title">support-terminal.exe</div>
+      <p><span class="command">user@it-support:~$</span> whoami</p>
+      <p>IT Support Specialist in training</p>
+      <br>
+      <p><span class="command">user@it-support:~$</span> skills</p>
+      <p>✓ Windows troubleshooting</p>
+      <p>✓ Network diagnostics</p>
+      <p>✓ Help desk documentation</p>
+      <p>✓ Technical support</p>
+      <br>
+      <p style="color:var(--green)">Status: Always learning_</p>
+    </div>
+  </div>
 
-      <div class="projects">
+  <section class="container" id="projects">
+    <div class="section-label">01 / Hands-on experience</div>
+    <h2>My IT Projects</h2>
+    <p class="section-intro">
+      These labs demonstrate my technical learning, troubleshooting
+      process, and ability to document my work.
+    </p>
 
-        <article class="project-card">
-          <h3>Network Troubleshooting Lab</h3>
-          <p>
-            Practice documenting Windows troubleshooting steps,
-            checking connectivity, and investigating possible causes.
-          </p>
-          <p class="note">
-            Skills: Windows, troubleshooting, documentation.
-          </p>
-          <a href="projects/windows-network-troubleshooting/">
-            View project
-          </a>
-        </article>
+    <div class="grid">
+      <article class="card">
+        <div class="card-icon">⌘</div>
+        <h3>Help Desk Troubleshooting Lab</h3>
+        <p>
+          Hands-on support practice involving Windows troubleshooting,
+          evidence screenshots, and technical documentation.
+        </p>
+        <div class="tags">
+          <span class="tag">Help Desk</span>
+          <span class="tag">Windows</span>
+          <span class="tag">Documentation</span>
+        </div>
+        <a class="button"
+           href="https://github.com/sclabon540/IT-Portfolio"
+           target="_blank" rel="noopener noreferrer">Explore Repository ↗</a>
+      </article>
 
-        <article class="project-card">
-          <h3>Linux Fundamentals Lab</h3>
-          <p>
-            Practice essential Linux commands for navigating
-            directories and viewing files.
-          </p>
-          <p class="note">
-            Skills: Linux command line and file navigation.
-          </p>
-          <a href="projects/linux-fundamentals/">Linux Fundamentals Lab</a>
-            View project
-          </a>
-        </article>
+      <article class="card">
+        <div class="card-icon">⌁</div>
+        <h3>Windows Network Troubleshooting</h3>
+        <p>
+          Practice using ipconfig and ping to examine IP configuration
+          and troubleshoot network connectivity.
+        </p>
+        <div class="tags">
+          <span class="tag">ipconfig</span>
+          <span class="tag">ping</span>
+          <span class="tag">Networking</span>
+        </div>
+        <a class="button"
+           href="projects/windows-network-troubleshooting/README.md">View Lab ↗</a>
+      </article>
 
-        <article class="project-card">
-          <h3>Help Desk Troubleshooting Lab</h3>
-          
-<div class="project">
-  <h3>Help Desk Troubleshooting Lab</h3>
-  <p>
-    A Windows 11 troubleshooting lab demonstrating application
-    diagnostics, Task Manager, evidence collection, and incident documentation.
-  </p>
-  <a href="projects/help-desk-troubleshooting-lab/">
-    View Project
-  </a>
-  |
-  <a href="projects/help-desk-troubleshooting-lab/README.md">
-    View Documentation
-  </a>
-</div>
+      <article class="card">
+        <div class="card-icon">▤</div>
+        <h3>Windows Troubleshooting</h3>
+        <p>
+          Windows support practice focused on identifying technical
+          issues and recording troubleshooting steps.
+        </p>
+        <div class="tags">
+          <span class="tag">Windows</span>
+          <span class="tag">Diagnostics</span>
+        </div>
+        <a class="button"
+           href="https://github.com/sclabon540/IT-Portfolio"
+           target="_blank" rel="noopener noreferrer">Explore Repository ↗</a>
+      </article>
 
-        
+      <article class="card">
+        <div class="card-icon">$_</div>
+        <h3>Linux Fundamentals Lab</h3>
+        <p>
+          Building familiarity with Linux commands, terminal navigation,
+          and basic file operations.
+        </p>
+        <div class="tags">
+          <span class="tag">Linux</span>
+          <span class="tag">Command Line</span>
+        </div>
+        <a class="button"
+           href="https://github.com/sclabon540/IT-Portfolio"
+           target="_blank" rel="noopener noreferrer">Explore Repository ↗</a>
+      </article>
+    </div>
+  </section>
 
+  <section class="container" id="skills">
+    <div class="section-label">02 / Technical toolkit</div>
+    <h2>Technical Skills</h2>
+    <p class="section-intro">
+      Skills relevant to entry-level IT support, help desk, service desk,
+      and desktop support opportunities.
+    </p>
+
+    <div class="skills">
+      <div class="skill">
+        <strong>Windows Support</strong>
+        <p>Operating system and application troubleshooting</p>
       </div>
+      <div class="skill">
+        <strong>Networking</strong>
+        <p>IP configuration, ping, DNS, and connectivity basics</p>
+      </div>
+      <div class="skill">
+        <strong>Hardware Support</strong>
+        <p>Basic computer and printer troubleshooting</p>
+      </div>
+      <div class="skill">
+        <strong>Customer Support</strong>
+        <p>Patient communication and user assistance</p>
+      </div>
+      <div class="skill">
+        <strong>Technical Documentation</strong>
+        <p>Recording steps, evidence, and findings</p>
+      </div>
+      <div class="skill">
+        <strong>Additional Knowledge</strong>
+        <p>Linux, Python, SQL, JIRA, and Azure fundamentals</p>
+      </div>
+    </div>
+  </section>
 
-      <p class="note">
-        Project links should point to the actual documentation
-        for each project. The Help Desk Ticket card currently
-        opens the main repository until a dedicated project page
-        is linked.
-      </p>
-    </section>
-
-    <section id="education">
-      <h2>Education</h2>
-      <h3>Southern New Hampshire University</h3>
+  <section class="container" id="about">
+    <div class="section-label">03 / About me</div>
+    <h2>My IT Journey</h2>
+    <div class="about">
       <p>
-        Associate degree in Information Technology —
-        in progress, expected 2027.
+        I'm pursuing an Associate degree in Information Technology at
+        Southern New Hampshire University, with expected graduation in
+        2027. I enjoy learning how technology works, investigating
+        technical problems, and finding practical solutions.
       </p>
       <p>
-        Additional learning includes networking, cybersecurity,
-        Windows administration, Python, and data analytics.
+        My goal is to begin my career in IT support and continue
+        developing my troubleshooting, communication, and technical
+        documentation skills through hands-on experience.
       </p>
-    </section>
+    </div>
+  </section>
 
-    <section id="contact">
-      <h2>Contact and Portfolio</h2>
-      <p>
-        Explore my GitHub repository to review my projects
-        and technical documentation.
-      </p>
-      <p>
-        <a href="https://github.com/sclabon540/IT-Portfolio">
-          Visit my GitHub portfolio repository
-        </a>
-      </p>
-    </section>
+  <section class="container" id="contact">
+    <div class="contact">
+      <div>
+        <div class="section-label">04 / Connect</div>
+        <h2>Let's connect!</h2>
+        <p>Explore my IT projects and follow my technical learning journey.</p>
+      </div>
+      <a class="button primary"
+         href="https://github.com/sclabon540"
+         target="_blank" rel="noopener noreferrer">Visit My GitHub ↗</a>
+    </div>
+  </section>
+</main>
 
-  </main>
-
-  <footer>
-    <p>Sierra Clabon | IT Support Portfolio</p>
-    <p>Hands-on learning, troubleshooting, and technical growth.</p>
-  </footer>
+<footer>
+  <div class="container">
+    © 2026 Sierra Clabon | IT Support Specialist Portfolio
+  </div>
+</footer>
 
 </body>
 </html>
