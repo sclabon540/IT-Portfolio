@@ -187,7 +187,21 @@
       border-color: var(--blue);
       transform: translateY(-3px);
     }
+.project-screenshot {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 15px 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #07111f;
+}
 
+.project-screenshot-caption {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-top: -8px;
+}
     .card-icon {
       font-size: 1.7rem;
     }
@@ -353,6 +367,34 @@
           Practice using ipconfig and ping to examine IP configuration
           and troubleshoot network connectivity.
         </p>
+        <img
+  class="project-screenshot"
+  src="projects/windows-network-troubleshooting/ipconfig-results.png"
+  alt="Screenshot showing Windows IP configuration results"
+  loading="lazy"
+>
+<p class="project-screenshot-caption">
+  Evidence: Windows IP configuration results
+</p>
+        <img
+  class="project-screenshot"
+  src="projects/windows-network-troubleshooting/ping-ip-results.png"
+  alt="Screenshot showing a ping test to an IP address"
+  loading="lazy"
+>
+<p class="project-screenshot-caption">
+  Evidence: IP connectivity test
+</p>
+
+<img
+  class="project-screenshot"
+  src="projects/windows-network-troubleshooting/ping-dns-results.png"
+  alt="Screenshot showing a ping test using a hostname"
+  loading="lazy"
+>
+<p class="project-screenshot-caption">
+  Evidence: DNS and hostname connectivity test
+</p>
         <div class="tags">
           <span class="tag">ipconfig</span>
           <span class="tag">ping</span>
